@@ -8,11 +8,13 @@
     "dev": "nodemon index.js",
     "clean": "rimraf uploads/",
     "seed": "node database/seed/index.js && npm run clean",
-    "test": "jest"
+    "test": "jest --forceExit",
+    "test:watch": "jest --watch"
   },
   "author": "Pablo Suarez",
   "license": "ISC",
   "dependencies": {
+    "@types/jest": "^26.0.15",
     "axios": "^0.19.0",
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.5",
@@ -22,7 +24,8 @@
     "express": "^4.17.1",
     "express-validator": "^6.4.0",
     "helmet": "^3.22.0",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "supertest": "^5.0.0"
   },
   "devDependencies": {
     "concurrently": "^3.5.1",
